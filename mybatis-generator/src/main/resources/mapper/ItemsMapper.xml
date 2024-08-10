@@ -43,4 +43,32 @@
     <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
+  <resultMap id="BaseResultMap" type="com.imooc.pojo.Items">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="root_cat_id" jdbcType="INTEGER" property="rootCatId" />
+    <result column="sell_counts" jdbcType="INTEGER" property="sellCounts" />
+    <result column="on_off_status" jdbcType="TINYINT" property="onOffStatus" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.imooc.pojo.Items">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="item_name" jdbcType="VARCHAR" property="itemName" />
+    <result column="cat_id" jdbcType="INTEGER" property="catId" />
+    <result column="root_cat_id" jdbcType="INTEGER" property="rootCatId" />
+    <result column="sell_counts" jdbcType="INTEGER" property="sellCounts" />
+    <result column="on_off_status" jdbcType="TINYINT" property="onOffStatus" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
 </mapper>
