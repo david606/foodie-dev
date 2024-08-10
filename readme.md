@@ -133,6 +133,6 @@ The specified target project directory src\main\resources does not exist
 ```
 
 #### 解决方案2
-修改运行时工作目录，默认是聚合工程，修改为当前工程，即逆向工程 mybatis-generator
+修改运行时工作目录，默认是聚合工程，修改为当前工程，即逆向工程 mybatis-generator.
 ![img.png](img.png)
 
