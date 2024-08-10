@@ -136,3 +136,16 @@ The specified target project directory src\main\resources does not exist
 修改运行时工作目录，默认是聚合工程，修改为当前工程，即逆向工程 mybatis-generator.
 ![img.png](img.png)
 
+#### 复制生成物料到应对工程并做配置
+```xml
+<!--mapper-->
+<dependency>
+    <groupId>tk.mybatis</groupId>
+    <artifactId>mapper-spring-boot-starter</artifactId>
+    <version>1.2.4</version>
+</dependency>
+```
+
+
+
+
