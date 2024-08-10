@@ -5,3 +5,6 @@
 /foodie-pojo/target/
 /foodie-service/target/
 /mybatis-generator/target/
+/.idea/
+/mybatis-generator/.idea/
+.DS_Store
