@@ -1,5 +1,6 @@
 package com.imooc.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
+@NoArgsConstructor()
 @ToString
 public class Users {
     /**
@@ -26,7 +27,9 @@ public class Users {
     private String username;
 
     /**
-     * 密码;密码
+     * 密码
+     * <br>
+     * 敏感信息不显示给前端
      */
     private String password;
 
@@ -36,7 +39,8 @@ public class Users {
     private String nickname;
 
     /**
-     * 真实姓名;真实姓名
+     * 真实姓名
+     * 敏感信息不显示给前端
      */
     private String realname;
 
@@ -58,7 +62,7 @@ public class Users {
     /**
      * 性别;性别 1:男  0:女  2:保密
      */
-    private Byte sex;
+    private Integer sex;
 
     /**
      * 生日;生日

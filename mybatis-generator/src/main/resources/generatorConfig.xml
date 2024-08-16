@@ -29,18 +29,6 @@
         <javaClientGenerator targetPackage="com.imooc.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- 指定要生成的数据库表 -->
-        <table tableName="carousel"/>
-        <table tableName="category"/>
-        <table tableName="items"/>
-        <table tableName="items_comments"/>
-        <table tableName="items_img"/>
-        <table tableName="items_param"/>
-        <table tableName="items_spec"/>
-        <table tableName="order_items"/>
-        <table tableName="order_status"/>
-        <table tableName="orders"/>
-        <table tableName="user_address"/>
-        <table tableName="users"/>
-        <table tableName="foodie.users"/>
+        <table tableName="stu"/>
     </context>
 </generatorConfiguration>
