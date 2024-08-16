@@ -135,7 +135,7 @@ The specified target project directory src\main\resources does not exist
 #### 解决方案2
 
 修改运行时工作目录，默认是聚合工程，修改为当前工程，即逆向工程 mybatis-generator.
-![img.png](.assets/img.png)
+![img.png](.aassets/img.png)
 
 #### 复制生成物料到应对工程并做配置
 
@@ -195,7 +195,7 @@ private void saveChild2() {
 java.lang.ArithmeticException: / by zero
 ```
 
-![img_1.png](.assets/img_1.png)
+![img_1.png](.aassets/img_1.png)
 
 结论： Parent 和 Child-01 都插入成功，但是 Child-02 没有插入。
 
@@ -234,7 +234,7 @@ private void saveChild2() {
 }
 ```
 
-![img.png](.assets/img2.png)
+![img.png](.aassets/img2.png)
 
 1. 事务的传播，父方法 testPropagation 会把事务传递给子方法 saveParent 和 saveChildren;
 2. 当其中一个发生异常，都会回滚。所以 Parent 和 Child-01、Child-02
@@ -270,7 +270,7 @@ private void saveChild2() {
 }
 ```
 
-![img_2.png](.assets/img_2.png)
+![img_2.png](.aassets/img_2.png)
 
 1. 父方法 testPropagation 没有设置事务。插入值 Parent。
 2. 子方法 saveChildren 设置了事务，发生异常会回滚。没能插入值 Child-01 和 Child-02。
@@ -342,7 +342,7 @@ private void saveChild2() {
 }
 ```
 
-![img_3.png](.assets/img_3.png)
+![img_3.png](.aassets/img_3.png)
 
 1. SUPPORTS 是随着父方法 testPropagation 的事务
 2. 父方法没有事务，所以子方法也就没有事务
@@ -425,7 +425,7 @@ private void saveChild2() {
 org.springframework.transaction.IllegalTransactionStateException: No existing transaction found for transaction marked with propagation 'mandatory'
 ```
 
-![img_4.png](.assets/img_4.png)
+![img_4.png](.aassets/img_4.png)
 
 1. 父方法没有事务，插入值 Parent
 2. 父方法没有事务，子方法 MANDATORY，抛出异常，Child-01 和 Child-02 都没有插入。
@@ -461,7 +461,7 @@ private void saveChild2() {
 }
 ```
 
-![img2.png](.assets/img2.png)
+![img2.png](.aassets/img2.png)
 
 1. 父方法 REQUIRED
 2. 子方法 MANDATORY ，事务随着父方法，使用父方法事务
@@ -504,7 +504,7 @@ private void saveChild2() {
 }
 ```
 
-![img_5.png](.assets/img_5.png)
+![img_5.png](.aassets/img_5.png)
 
 1. 父方法没有事务，插入值 Parent
 2. 子方法 REQUIRES_NEW ，开启一个新的事务
@@ -541,7 +541,7 @@ private void saveChild2() {
 }
 ```
 
-![img_6.png](.assets/img_6.png)
+![img_6.png](.aassets/img_6.png)
 
 1. 父方法 REQUIRED
 2. 子方法 REQUIRES_NEW ，开启一个新的事务
@@ -583,7 +583,7 @@ private void saveChild2() {
 }
 ```
 
-![img_7.png](.assets/img_7.png)
+![img_7.png](.aassets/img_7.png)
 
 1. 父方法 REQUIRED，持有一个事务
 2. 子方法 REQUIRES_NEW ，开启一个新的事务
@@ -633,7 +633,7 @@ private void saveChild2() {
 }
 ```
 
-![img_8.png](.assets/img_8.png)
+![img_8.png](.aassets/img_8.png)
 
 1. 父方法无事务，插入值 Parent
 2. 子方法 NOT_SUPPORTED ，非事务执行，插入值 Child-01
@@ -672,7 +672,7 @@ private void saveChild2() {
 }
 ```
 
-![img_9.png](.assets/img_9.png)
+![img_9.png](.aassets/img_9.png)
 
 1. 父方法 REQUIRED，持有一个事务
 2. 子方法 NOT_SUPPORTED ，非事务执行，插入值 Child-01
@@ -711,7 +711,7 @@ private void saveChild2() {
 }
 ```
 
-![img_2.png](.assets/img_2.png)
+![img_2.png](.aassets/img_2.png)
 
 ```text
 org.springframework.transaction.IllegalTransactionStateException: Existing transaction found for transaction marked with propagation 'never'
@@ -763,7 +763,7 @@ private void saveChild2() {
 }
 ```
 
-![img_2.png](.assets/img_2.png)
+![img_2.png](.aassets/img_2.png)
 
 1. 父方法 REQUIRED，持有一个事务
 2. 子方法 NESTED ，开启一个嵌套事务
@@ -807,7 +807,7 @@ private void saveChild2() {
 }
 ```
 
-![img_10.png](.assets/img_10.png)
+![img_10.png](.aassets/img_10.png)
 
 1. 主方法持有一个事务
 2. 子方法开启一个嵌套事务
@@ -935,8 +935,8 @@ public class Swagger2Config {
 }
 ```
 
-![img_11.png](.assets/img_11.png)
-![img_12.png](.assets/img_12.png)
+![img_11.png](.aassets/img_11.png)
+![img_12.png](.aassets/img_12.png)
 
 ### Swagger2 优化
 
@@ -1004,7 +1004,7 @@ public class UsersBO {
 }
 ```
 
-![img_13.png](.assets/img_13.png)
+![img_13.png](.aassets/img_13.png)
 
 ### Cookie
 
@@ -1063,7 +1063,7 @@ response.addCookie(cookie);
 ```
 
 可以在设置 Cookie 时使用 `.foodie.com` ，这样 server.foodie.com、local.foodie.com 都有效。
-![img_14.png](.assets/img_14.png)
+![img_14.png](.aassets/img_14.png)
 
 ### 用户退出 
 
